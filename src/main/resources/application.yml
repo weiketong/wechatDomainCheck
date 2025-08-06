@@ -1,0 +1,19 @@
+server:
+  port: 11001
+  servlet-path: /check
+spring:
+  profiles:
+    active: '@activatedProperties@'
+  servlet:
+    multipart:
+      max-request-size: 1024MB
+      max-file-size: 1024MB
+  jackson:
+    default-property-inclusion: NON_NULL
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+logging:
+  level:
+    org.springframework: error
+    org.hibernate: error
+    io.netty: error
